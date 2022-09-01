@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="360px" viewBox="0 0 360 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Main3_PC</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="70.3334774%" y1="15.3671795%" x2="15.8020967%" y2="70.4387822%" id="linearGradient-1">
+            <stop stop-color="#FD8C8C" offset="0%"></stop>
+            <stop stop-color="#FFB1B1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Main3_PC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Container" x="0" y="0" width="360" height="360"></rect>
+        <g id="Group" transform="translate(48.000000, 48.000000)">
+            <polygon id="Fill-1" fill="url(#linearGradient-1)" points="144.041 -2.84217094e-14 -2.84217094e-14 144.041 120.846 264.887 264.887 120.846"></polygon>
+            <path d="M133.4036,77.7366 C133.7396,77.7346 134.0726,77.7256 134.4066,77.7196 L132.0946,77.7196 C132.5306,77.7286 132.9666,77.7356 133.4036,77.7366" id="Fill-1" fill="#FFC5C5"></path>
+            <polygon id="Fill-6" fill="#545493" points="144.041 120.846 264.887 120.846 264.887 0 144.041 0"></polygon>
+            <polygon id="Fill-8" fill="#FE6565" points="0 264.887 120.846 264.887 120.846 144.041 0 144.041"></polygon>
+            <path d="M264.887,120.846 C264.887,54.104 210.783,0 144.041,0 L144.041,120.846 L264.887,120.846 Z" id="Fill-9" fill="#202040"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,233 @@
+@import "_vars";
+@import "_mixin";
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Roboto", "Noto Sans KR";
+  font-size: 1.6rem;
+  background-color: #fff;
+  max-width: 1920px;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+  z-index: 9;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 100px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.open {
+    #logo {
+      z-index: 3;
+      color: #fff;
+      svg {
+        fill: #fff;
+        transition: fill 0.25s ease-in-out;
+      }
+    }
+    #gnb {
+      top: 0;
+    }
+    .btnAll {
+      span {
+        &:nth-child(1) {
+          top: 49px;
+          transform: rotate(45deg);
+          border-radius: 100px;
+          background-color: #fff;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          top: 49px;
+          transform: rotate(-45deg);
+          border-radius: 100px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .btnAll {
+    display: block;
+  }
+
+  #gnb {
+    margin-bottom: 0;
+    position: fixed;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $main-color;
+    color: #fff;
+    padding-top: 80px;
+    transition: top 0.25s ease-in-out;
+    .mainList {
+      position: absolute;
+      top: calc(50% - 460px);
+      left: calc(50% - 189px);
+      width: clamp(450px, 15vw, 500px);
+      height: 880px;
+      padding-top: 238px;
+      opacity: 0;
+      .list {
+        li {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          margin: 15px;
+          &:hover :before {
+            opacity: 1;
+            transition: all 0.25s ease-in-out;
+          }
+          &:hover > a {
+            color: #fff;
+            -webkit-text-stroke: none;
+            transition: all 0.25s ease-in-out;
+          }
+          &:hover > h3 {
+            transform: translate(-400%, 40%);
+            transition: all 0.25s ease-in-out;
+          }
+          h3 {
+            transform: translateY(40%);
+            padding: 0px 15px 25px 0;
+            font-size: 12px;
+            &::before {
+              position: absolute;
+              content: " ";
+              width: 100px;
+              height: 1px;
+              top: 10%;
+              left: 31px;
+              background-color: #fff;
+              opacity: 0;
+            }
+          }
+          a {
+            width: 304px;
+            text-align: left;
+            text-decoration: none;
+            -webkit-text-stroke: 1px #fff;
+            font-size: clamp(46px, 4.1vw, 60px);
+            font-weight: 700;
+            letter-spacing: -0.93px;
+            color: hsla(0, 0%, 100%, 0);
+            // transform: translateZ(0);
+            // transition-property: color;
+            // transition-duration: 0.2s;
+            // transition-timing-function: ease-in-out;
+          }
+          &.on {
+            h3 {
+              transform: translate(-400%, 40%);
+              transition: all 0.25s ease-in-out;
+              &:before {
+                opacity: 1;
+                transition: all 0.25s ease-in-out;
+              }
+            }
+            a {
+              color: #fff;
+              -webkit-text-stroke: none;
+              transition: all 0.25s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+    .navImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(30px);
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/layout/gnb-salmon.d0464d65.png);
+      background-repeat: no-repeat;
+      background-size: 285px 751px;
+      background-position: center bottom;
+    }
+    .subList {
+      width: 360px;
+      position: absolute;
+      top: calc(50% - 530px);
+      padding: 320px 0 0 35px;
+      height: 880px;
+      left: 0;
+      opacity: 0;
+      .sns {
+        display: flex;
+        margin-bottom: 50px;
+        li {
+          margin: 7px;
+        }
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+      }
+      .lang {
+        display: flex;
+        margin-bottom: 50px;
+
+        li {
+          font-size: 13px;
+          font-weight: 700;
+          margin: 14px;
+          span {
+            opacity: 0.5;
+          }
+        }
+      }
+      .qa {
+        font-size: 15px;
+        font-weight: 500;
+        li {
+          margin-left: 14px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .btnAll {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 70px;
+    span {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: #111;
+      position: absolute;
+      left: 20px;
+      transition: all 0.25s ease-in-out;
+      &:nth-child(1) {
+        top: 29px;
+      }
+      &:nth-child(2) {
+        top: 39px;
+      }
+      &:nth-child(3) {
+        top: 49px;
+      }
+    }
+  }
+}

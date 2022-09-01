@@ -1,0 +1,55 @@
+.section {
+  width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#mainVisual {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+#mainVisual .inner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainVisual .inner .section .titleBox {
+  width: 1280px;
+  display: block;
+  position: absolute;
+  top: 30%;
+}
+#mainVisual .inner .section .titleBox .calendar {
+  display: flex;
+  font-size: 18px;
+  color: rgb(83, 83, 83);
+  justify-content: center;
+  margin: 10px 50px;
+}
+#mainVisual .inner .section .titleBox .calendar li {
+  padding: 0 30px;
+}
+#mainVisual .inner .section .titleBox .grassBox {
+  width: 1280px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#mainVisual .inner .section .titleBox .grassBox .grassCol {
+  display: flex;
+  flex-direction: column;
+}
+#mainVisual .inner .section .titleBox .grassBox .grassCol .grass {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin: 5px;
+}
+#mainVisual .inner .section .titleBox .grassBox .grassCol .grassColor01 {
+  border: 3px solid #dfe1e4;
+}
