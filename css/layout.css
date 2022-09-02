@@ -17,6 +17,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  backdrop-filter: blur(4px);
   color: #fff;
   z-index: 9;
   overflow: hidden;
@@ -68,7 +69,6 @@ body {
   top: 100%;
   width: 100%;
   height: 100vh;
-  background-color: #ff6565;
   color: #fff;
   padding-top: 80px;
   transition: top 0.25s ease-in-out;

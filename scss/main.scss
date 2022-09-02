@@ -20,40 +20,66 @@
     .section {
       .titleBox {
         width: 1280px;
+        height: clamp(210px, 40vh, 320px);
         display: block;
-        position: absolute;
-        top: 30%;
-        .calendar {
-          display: flex;
-          font-size: 18px;
-          color: rgb(83, 83, 83);
-          justify-content: center;
-          margin: 10px 50px;
-
-          li {
-            padding: 0 30px;
-          }
-        }
-        .grassBox {
-          width: 1280px;
-          height: auto;
-
-          justify-content: center;
-          align-items: center;
-          display: flex;
-
-          .grassCol {
+        margin-top: calc(25% - 70px);
+        border-radius: 20px;
+        background-color: #fbfbff;
+        border: 2px solid #d8d8d8;
+        box-shadow: 1px 0px 10px rgb(224, 224, 224);
+        .gitBox {
+          transform: translateY(8%);
+          .calendar {
             display: flex;
-            flex-direction: column;
-            .grass {
-              content: "";
-              width: 20px;
-              height: 20px;
-              border-radius: 5px;
-              margin: 5px;
+            font-size: clamp(12px, 1.4vw, 16px);
+            font-weight: 300;
+            color: rgb(83, 83, 83);
+            justify-content: center;
+            margin: 15px 50px;
+
+            li {
+              padding: 0 clamp(15px, 3vw, 33px);
             }
-            .grassColor01 {
-              border: 3px solid $grass01-bdcolor;
+          }
+          .grassBox {
+            width: 1280px;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            .grassCol {
+              display: flex;
+              flex-direction: column;
+              .grass {
+                content: "";
+                width: clamp(13px, 2vw, 20px);
+                height: clamp(13px, 2.5vh, 20px);
+                border-radius: 5px;
+                margin-right: clamp(2.5px, 0.5vw, 5px);
+                margin-left: clamp(2.5px, 0.5vw, 5px);
+                margin-bottom: clamp(2.5px, 0.5vh, 5px);
+                margin-top: clamp(2.5px, 0.5vh, 5px);
+              }
+              #grassColor01 {
+                border: 3px solid $grass01-bdcolor;
+                background-color: $grass01-color;
+              }
+              #grassColor02 {
+                border: 3px solid $grass02-bdcolor;
+                background-color: $grass02-color;
+              }
+              #grassColor03 {
+                border: 3px solid $grass03-bdcolor;
+                background-color: $grass03-color;
+              }
+              #grassColor04 {
+                border: 3px solid $grass04-color;
+                background-color: $grass04-color;
+              }
+              #grassColor05 {
+                border: 3px solid $grass05-color;
+                background-color: $grass05-color;
+              }
             }
           }
         }

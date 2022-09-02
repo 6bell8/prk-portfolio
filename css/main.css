@@ -18,38 +18,66 @@
 }
 #mainVisual .inner .section .titleBox {
   width: 1280px;
+  height: clamp(210px, 40vh, 320px);
   display: block;
-  position: absolute;
-  top: 30%;
+  margin-top: calc(25% - 70px);
+  border-radius: 20px;
+  background-color: #fbfbff;
+  border: 2px solid #d8d8d8;
+  box-shadow: 1px 0px 10px rgb(224, 224, 224);
 }
-#mainVisual .inner .section .titleBox .calendar {
+#mainVisual .inner .section .titleBox .gitBox {
+  transform: translateY(8%);
+}
+#mainVisual .inner .section .titleBox .gitBox .calendar {
   display: flex;
-  font-size: 18px;
+  font-size: clamp(12px, 1.4vw, 16px);
+  font-weight: 300;
   color: rgb(83, 83, 83);
   justify-content: center;
-  margin: 10px 50px;
+  margin: 15px 50px;
 }
-#mainVisual .inner .section .titleBox .calendar li {
-  padding: 0 30px;
+#mainVisual .inner .section .titleBox .gitBox .calendar li {
+  padding: 0 clamp(15px, 3vw, 33px);
 }
-#mainVisual .inner .section .titleBox .grassBox {
+#mainVisual .inner .section .titleBox .gitBox .grassBox {
   width: 1280px;
   height: auto;
   justify-content: center;
   align-items: center;
   display: flex;
 }
-#mainVisual .inner .section .titleBox .grassBox .grassCol {
+#mainVisual .inner .section .titleBox .gitBox .grassBox .grassCol {
   display: flex;
   flex-direction: column;
 }
-#mainVisual .inner .section .titleBox .grassBox .grassCol .grass {
+#mainVisual .inner .section .titleBox .gitBox .grassBox .grassCol .grass {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: clamp(13px, 2vw, 20px);
+  height: clamp(13px, 2.5vh, 20px);
   border-radius: 5px;
-  margin: 5px;
+  margin-right: clamp(2.5px, 0.5vw, 5px);
+  margin-left: clamp(2.5px, 0.5vw, 5px);
+  margin-bottom: clamp(2.5px, 0.5vh, 5px);
+  margin-top: clamp(2.5px, 0.5vh, 5px);
 }
-#mainVisual .inner .section .titleBox .grassBox .grassCol .grassColor01 {
+#mainVisual .inner .section .titleBox .gitBox .grassBox .grassCol #grassColor01 {
   border: 3px solid #dfe1e4;
+  background-color: #ebedf0;
+}
+#mainVisual .inner .section .titleBox .gitBox .grassBox .grassCol #grassColor02 {
+  border: 3px solid #97dea2;
+  background-color: #9be9a8;
+}
+#mainVisual .inner .section .titleBox .gitBox .grassBox .grassCol #grassColor03 {
+  border: 3px solid #3ebb60;
+  background-color: #40c463;
+}
+#mainVisual .inner .section .titleBox .gitBox .grassBox .grassCol #grassColor04 {
+  border: 3px solid #30a14e;
+  background-color: #30a14e;
+}
+#mainVisual .inner .section .titleBox .gitBox .grassBox .grassCol #grassColor05 {
+  border: 3px solid #216e39;
+  background-color: #216e39;
 }
