@@ -2,6 +2,21 @@ html {
   font-size: 10px;
 }
 
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  border: 1.5px solid #242a70;
+}
+
 body {
   font-family: "Roboto", "Noto Sans KR";
   font-size: 1.6rem;
@@ -13,16 +28,45 @@ body {
   position: fixed;
   width: 100%;
   height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  backdrop-filter: blur(4px);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   color: #fff;
   z-index: 9;
   overflow: hidden;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
+
+#header #logo {
+  z-index: 3;
+  height: 40px;
+  left: 30px;
+  position: absolute;
+  top: 20px;
+}
+
+#header #logo a {
+  width: 60px;
+  height: 60px;
+}
+
+#header #logo a img {
+  height: 30px;
+}
+
 #header:before {
   content: "";
   display: block;
@@ -34,35 +78,47 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+
 #header.open #logo {
   z-index: 3;
   color: #fff;
 }
+
 #header.open #logo svg {
   fill: #fff;
+  -webkit-transition: fill 0.25s ease-in-out;
   transition: fill 0.25s ease-in-out;
 }
+
 #header.open #gnb {
   top: 0;
 }
+
 #header.open .btnAll span:nth-child(1) {
-  top: 49px;
-  transform: rotate(45deg);
+  top: 39px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   border-radius: 100px;
-  background-color: #fff;
+  background-color: #242a70;
 }
+
 #header.open .btnAll span:nth-child(2) {
   opacity: 0;
-}
-#header.open .btnAll span:nth-child(3) {
-  top: 49px;
-  transform: rotate(-45deg);
   border-radius: 100px;
-  background-color: #fff;
 }
+
+#header.open .btnAll span:nth-child(3) {
+  top: 39px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-radius: 100px;
+  background-color: #242a70;
+}
+
 #header .btnAll {
   display: block;
 }
+
 #header #gnb {
   margin-bottom: 0;
   position: fixed;
@@ -71,8 +127,10 @@ body {
   height: 100vh;
   color: #fff;
   padding-top: 80px;
+  -webkit-transition: top 0.25s ease-in-out;
   transition: top 0.25s ease-in-out;
 }
+
 #header #gnb .mainList {
   position: absolute;
   top: calc(50% - 460px);
@@ -82,30 +140,45 @@ body {
   padding-top: 238px;
   opacity: 0;
 }
+
 #header #gnb .mainList .list li {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin: 15px;
 }
+
 #header #gnb .mainList .list li:hover :before {
   opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 #header #gnb .mainList .list li:hover > a {
   color: #fff;
   -webkit-text-stroke: none;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 #header #gnb .mainList .list li:hover > h3 {
-  transform: translate(-400%, 40%);
+  -webkit-transform: translate(-400%, 40%);
+          transform: translate(-400%, 40%);
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 #header #gnb .mainList .list li h3 {
-  transform: translateY(40%);
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
   padding: 0px 15px 25px 0;
   font-size: 12px;
 }
+
 #header #gnb .mainList .list li h3::before {
   position: absolute;
   content: " ";
@@ -116,6 +189,7 @@ body {
   background-color: #fff;
   opacity: 0;
 }
+
 #header #gnb .mainList .list li a {
   width: 304px;
   text-align: left;
@@ -124,33 +198,42 @@ body {
   font-size: clamp(46px, 4.1vw, 60px);
   font-weight: 700;
   letter-spacing: -0.93px;
-  color: hsla(0deg, 0%, 100%, 0);
+  color: rgba(255, 255, 255, 0);
 }
+
 #header #gnb .mainList .list li.on h3 {
-  transform: translate(-400%, 40%);
+  -webkit-transform: translate(-400%, 40%);
+          transform: translate(-400%, 40%);
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 #header #gnb .mainList .list li.on h3:before {
   opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 #header #gnb .mainList .list li.on a {
   color: #fff;
   -webkit-text-stroke: none;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 #header #gnb .navImage {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(30px);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   width: 100%;
   height: 100%;
-  background-image: url(../images/layout/gnb-salmon.d0464d65.png);
   background-repeat: no-repeat;
   background-size: 285px 751px;
   background-position: center bottom;
 }
+
 #header #gnb .subList {
   width: 360px;
   position: absolute;
@@ -160,36 +243,49 @@ body {
   left: 0;
   opacity: 0;
 }
+
 #header #gnb .subList .sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
 }
+
 #header #gnb .subList .sns li {
   margin: 7px;
 }
+
 #header #gnb .subList .sns:nth-child(1) {
   margin-left: 0;
 }
+
 #header #gnb .subList .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
 }
+
 #header #gnb .subList .lang li {
   font-size: 13px;
   font-weight: 700;
   margin: 14px;
 }
+
 #header #gnb .subList .lang li span {
   opacity: 0.5;
 }
+
 #header #gnb .subList .qa {
   font-size: 15px;
   font-weight: 500;
 }
+
 #header #gnb .subList .qa li {
   margin-left: 14px;
   margin-bottom: 30px;
 }
+
 #header .btnAll {
   position: absolute;
   right: 0;
@@ -197,21 +293,27 @@ body {
   width: 80px;
   height: 70px;
 }
+
 #header .btnAll span {
   display: block;
   width: 30px;
   height: 2px;
-  background-color: #111;
+  background-color: #242a70;
+  border-radius: 100px;
   position: absolute;
   left: 20px;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
 #header .btnAll span:nth-child(1) {
   top: 29px;
 }
+
 #header .btnAll span:nth-child(2) {
   top: 39px;
 }
+
 #header .btnAll span:nth-child(3) {
   top: 49px;
 }

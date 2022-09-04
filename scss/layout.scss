@@ -3,6 +3,19 @@
 html {
   font-size: 10px;
 }
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0px 10px rgba(0, 0, 0, 0.25);
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  // background-color: #bfbfbf6f;
+  border: 1.5px solid $main-color;
+}
+
 body {
   font-family: "Roboto", "Noto Sans KR";
   font-size: 1.6rem;
@@ -17,11 +30,25 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
   color: #fff;
   z-index: 9;
   overflow: hidden;
   transition: all 0.25s ease;
+  #logo {
+    z-index: 3;
+    height: 40px;
+    left: 30px;
+    position: absolute;
+    top: 20px;
+    a {
+      width: 60px;
+      height: 60px;
+      img {
+        height: 30px;
+      }
+    }
+  }
   &:before {
     content: "";
     display: block;
@@ -48,19 +75,20 @@ body {
     .btnAll {
       span {
         &:nth-child(1) {
-          top: 49px;
+          top: 39px;
           transform: rotate(45deg);
           border-radius: 100px;
-          background-color: #fff;
+          background-color: $main-color;
         }
         &:nth-child(2) {
           opacity: 0;
+          border-radius: 100px;
         }
         &:nth-child(3) {
-          top: 49px;
+          top: 39px;
           transform: rotate(-45deg);
           border-radius: 100px;
-          background-color: #fff;
+          background-color: $main-color;
         }
       }
     }
@@ -159,7 +187,6 @@ body {
       transform: translateY(30px);
       width: 100%;
       height: 100%;
-      background-image: url(../images/layout/gnb-salmon.d0464d65.png);
       background-repeat: no-repeat;
       background-size: 285px 751px;
       background-position: center bottom;
@@ -215,7 +242,8 @@ body {
       display: block;
       width: 30px;
       height: 2px;
-      background-color: #111;
+      background-color: $main-color;
+      border-radius: 100px;
       position: absolute;
       left: 20px;
       transition: all 0.25s ease-in-out;

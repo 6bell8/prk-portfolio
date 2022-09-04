@@ -22,12 +22,13 @@
         width: 1280px;
         height: clamp(210px, 40vh, 320px);
         display: block;
-        margin-top: calc(25% - 70px);
+        margin-top: calc(30% - 70px);
         border-radius: 20px;
         background-color: #fbfbff;
         border: 2px solid #d8d8d8;
         box-shadow: 1px 0px 10px rgb(224, 224, 224);
         .gitBox {
+          opacity: 0;
           transform: translateY(8%);
           .calendar {
             display: flex;
@@ -59,6 +60,7 @@
                 margin-left: clamp(2.5px, 0.5vw, 5px);
                 margin-bottom: clamp(2.5px, 0.5vh, 5px);
                 margin-top: clamp(2.5px, 0.5vh, 5px);
+                opacity: 0;
               }
               #grassColor01 {
                 border: 3px solid $grass01-bdcolor;
@@ -84,6 +86,46 @@
           }
         }
       }
+      .iconScroll {
+        width: 100%;
+        bottom: 50px;
+        margin: 50px 0px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        -webkit-text-stroke: 1px #242a70;
+        color: #fff;
+        z-index: 1;
+        .icon {
+          display: block;
+          width: 24px;
+          height: 45px;
+          margin: 10px auto;
+          border: 2px solid #242a70;
+          border-radius: 100px;
+          &::before {
+            width: 2px;
+            height: 10px;
+            margin: 10px auto; //margin auto를 시켰을 때 포지션이 abs이면 안된다.
+            background-color: #242a70;
+            animation-name: mouseAnimation;
+            animation-duration: 0.75s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; //애니메이션이 위아래 동시에 부드러워짐
+            animation: mouseAnimation 0.75s ease-in-out 0s infinite alternate;
+            @include pseudo(block, relative, "");
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes mouseAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }
