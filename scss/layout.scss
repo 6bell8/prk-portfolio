@@ -4,7 +4,7 @@ html {
   font-size: 10px;
 }
 html::-webkit-scrollbar {
-  width: 1vw;
+  width: 0.8vw;
 }
 html::-webkit-scrollbar-track {
   border-radius: 5px;
@@ -258,4 +258,8 @@ body {
       }
     }
   }
+}
+
+#footer {
+  overflow: hidden;
 }

@@ -14,18 +14,9 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../css/aos.css" />
     <link rel="stylesheet" href="../css/splitting.css" />
     <link rel="stylesheet" href="../css/fullpage.css" />
@@ -96,6 +87,11 @@
       </div>
     </div>
     <!--mainVisual end-->
+    <div id="readMe">
+      <section class="section">
+        <? include("../include/grassCol.html"); ?>
+      </section>
+    </div>
 
     <footer id="footer" class="fp-auto-height">
       <div class="footerSns">
@@ -123,20 +119,27 @@
       const mainTL = gsap.timeline();
       const mainBoxTL = gsap.timeline();
 
-      mainBoxTL.to("#mainVisual .titleBox .gitBox ", {
+      mainBoxTL.to("#mainVisual .titleBox ", {
         opacity: 1,
         ease: "power4",
+        delay: 0.5,
       });
 
-      mainTL.to("#mainVisual .titleBox .gitBox .grassCol .grass", {
-        opacity: 1,
-        ease: "power4",
-        delay: 1,
-        stagger: {
-          from: "random",
-          each: 0.005,
-        },
-      });
+      mainTL
+        .to("#mainVisual .titleBox .gitBox .grassCol .grass", {
+          opacity: 1,
+          ease: "power4",
+          delay: 1,
+          rotation: 360,
+          stagger: {
+            from: "random",
+            each: 0.005,
+            rotation: 360,
+          },
+        })
+        .to("#mainVisual .inner .iconScroll", {
+          opacity: 1,
+        });
 
       let header = $("#header");
       const btnAll = $(".btnAll");
