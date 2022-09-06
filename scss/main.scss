@@ -2,152 +2,65 @@
 @import "_mixin";
 
 .section {
-  width: 1280px;
+  // width: 1280px;
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;
 }
 
-#mainVisual {
-  height: 100vh;
-  width: 100%;
+#main {
   overflow: hidden;
-  .inner {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .section {
-      .titleBox {
+  height: 100vh;
+  .section {
+    .inner {
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      .contents {
         width: 1280px;
-        height: clamp(210px, 40vh, 320px);
-        display: block;
-        margin-top: calc(30% - 70px);
-        border-radius: 20px;
-        background-color: #fbfbff;
-        border: 2px solid #d8d8d8;
-        box-shadow: 1px 0px 10px rgb(224, 224, 224);
-        opacity: 0;
-        .gitBox {
-          opacity: 1;
-          transform: translateY(8%);
-          .calendar {
-            display: flex;
-            font-size: clamp(12px, 1.4vw, 16px);
-            font-weight: 300;
-            color: rgb(83, 83, 83);
-            justify-content: center;
-            margin: 15px 50px;
-
-            li {
-              padding: 0 clamp(15px, 3vw, 33px);
-            }
-          }
-          .grassBox {
-            width: 1280px;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            .grassCol {
-              display: flex;
-              flex-direction: column;
-              .grass {
-                content: "";
-                width: clamp(13px, 2vw, 20px);
-                height: clamp(13px, 2.5vh, 20px);
-                border-radius: 5px;
-                margin-right: clamp(2.5px, 0.5vw, 5px);
-                margin-left: clamp(2.5px, 0.5vw, 5px);
-                margin-bottom: clamp(2.5px, 0.5vh, 5px);
-                margin-top: clamp(2.5px, 0.5vh, 5px);
-                opacity: 0;
-              }
-              #grassColor01 {
-                border: 3px solid $grass01-bdcolor;
-                background-color: $grass01-color;
-              }
-              #grassColor02 {
-                border: 3px solid $grass02-bdcolor;
-                background-color: $grass02-color;
-              }
-              #grassColor03 {
-                border: 3px solid $grass03-bdcolor;
-                background-color: $grass03-color;
-              }
-              #grassColor04 {
-                border: 3px solid $grass04-color;
-                background-color: $grass04-color;
-              }
-              #grassColor05 {
-                border: 3px solid $grass05-color;
-                background-color: $grass05-color;
-              }
-            }
-          }
-        }
-      }
-      .iconScroll {
-        width: 100%;
-        bottom: 50px;
-        margin: 50px 0px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 500;
-        -webkit-text-stroke: 1px #242a70;
-        color: #fff;
-        z-index: 1;
-        opacity: 0;
-        .icon {
-          display: block;
-          width: 24px;
-          height: 45px;
-          margin: 10px auto;
-          border: 2px solid #242a70;
-          border-radius: 100px;
-          &::before {
-            width: 2px;
-            height: 10px;
-            margin: 10px auto; //margin auto를 시켰을 때 포지션이 abs이면 안된다.
-            background-color: #242a70;
-            animation-name: mouseAnimation;
-            animation-duration: 0.75s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate; //애니메이션이 위아래 동시에 부드러워짐
-            animation: mouseAnimation 0.75s ease-in-out 0s infinite alternate;
-            @include pseudo(block, relative, "");
-          }
-        }
+        margin: 0 auto;
       }
     }
   }
 }
 
-#readMe {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  .section {
-    overflow: hidden;
-    .flowBox {
-      width: clamp(120px, 15vw, 200px);
-      height: clamp(500px, 40vh, 1080px);
-      display: block;
-      border-radius: 20px;
-      .colGrassBox {
-        opacity: 1;
-        width: auto;
-        max-height: 1080px;
+#mainTitle {
+  .titleBox {
+    height: clamp(210px, 40vh, 320px);
+    display: block;
+    margin-top: calc(25% - 70px);
+    border-radius: 20px;
+    background-color: #fbfbff;
+    border: 2px solid #d8d8d8;
+    box-shadow: 1px 0px 10px rgb(224, 224, 224);
+    opacity: 0;
+    .gitBox {
+      opacity: 1;
+      transform: translateY(8%);
+      .calendar {
         display: flex;
-        flex-direction: column;
-        animation: colGrass linear 15s infinite;
-        .grassRow {
+        font-size: clamp(12px, 1.4vw, 16px);
+        font-weight: 300;
+        color: rgb(83, 83, 83);
+        justify-content: center;
+        margin: 15px 50px;
+        li {
+          padding: 0 clamp(15px, 3vw, 33px);
+        }
+      }
+      .grassBox {
+        width: 1280px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        .grassCol {
           display: flex;
-          vertical-align: top;
-          .grass02 {
+          flex-direction: column;
+          .grass {
             content: "";
             width: clamp(13px, 2vw, 20px);
             height: clamp(13px, 2.5vh, 20px);
@@ -156,6 +69,7 @@
             margin-left: clamp(2.5px, 0.5vw, 5px);
             margin-bottom: clamp(2.5px, 0.5vh, 5px);
             margin-top: clamp(2.5px, 0.5vh, 5px);
+            opacity: 0;
           }
           #grassColor01 {
             border: 3px solid $grass01-bdcolor;
@@ -178,6 +92,115 @@
             background-color: $grass05-color;
           }
         }
+      }
+    }
+  }
+  .iconScroll {
+    width: 100%;
+    bottom: 50px;
+    margin: 50px 0px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-text-stroke: 1px #242a70;
+    color: #fff;
+    z-index: 1;
+    opacity: 0;
+    .icon {
+      display: block;
+      width: 24px;
+      height: 45px;
+      margin: 10px auto;
+      border: 2px solid #242a70;
+      border-radius: 100px;
+      &::before {
+        width: 2px;
+        height: 10px;
+        margin: 10px auto; //margin auto를 시켰을 때 포지션이 abs이면 안된다.
+        background-color: #242a70;
+        animation-name: mouseAnimation;
+        animation-duration: 0.75s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; //애니메이션이 위아래 동시에 부드러워짐
+        animation: mouseAnimation 0.75s ease-in-out 0s infinite alternate;
+        @include pseudo(block, relative, "");
+      }
+    }
+  }
+}
+
+#readMe {
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contents {
+      display: flex;
+      .flowBox {
+        width: clamp(120px, 15vw, 200px);
+        height: clamp(500px, 40vh, 1080px);
+        display: block;
+        border-radius: 20px;
+        flex-grow: 4;
+        .colGrassBox {
+          opacity: 1;
+          width: auto;
+          max-height: 1080px;
+          display: flex;
+          flex-direction: column;
+          animation: colGrass linear 15s infinite;
+          .grassRow {
+            display: flex;
+            vertical-align: top;
+            .grass02 {
+              content: "";
+              width: clamp(13px, 2vw, 20px);
+              height: clamp(13px, 2.5vh, 20px);
+              border-radius: 5px;
+              margin-right: clamp(2.5px, 0.5vw, 5px);
+              margin-left: clamp(2.5px, 0.5vw, 5px);
+              margin-bottom: clamp(2.5px, 0.5vh, 5px);
+              margin-top: clamp(2.5px, 0.5vh, 5px);
+            }
+            #grassColor01 {
+              border: 3px solid $grass01-bdcolor;
+              background-color: $grass01-color;
+            }
+            #grassColor02 {
+              border: 3px solid $grass02-bdcolor;
+              background-color: $grass02-color;
+            }
+            #grassColor03 {
+              border: 3px solid $grass03-bdcolor;
+              background-color: $grass03-color;
+            }
+            #grassColor04 {
+              border: 3px solid $grass04-color;
+              background-color: $grass04-color;
+            }
+            #grassColor05 {
+              border: 3px solid $grass05-color;
+              background-color: $grass05-color;
+            }
+          }
+        }
+      }
+      .profile {
+        display: flex;
+        position: relative;
+        .name {
+          font-size: 60px;
+          font-weight: 700;
+          position: absolute;
+          transform: translateX(-150%);
+          -webkit-text-stroke: 1px $main-color;
+          letter-spacing: 10px;
+          line-height: 1.3;
+          color: transparent;
+        }
+        .readMeList {
+        }
+        flex-grow: 6;
       }
     }
   }

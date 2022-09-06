@@ -14,9 +14,18 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="../css/aos.css" />
     <link rel="stylesheet" href="../css/splitting.css" />
     <link rel="stylesheet" href="../css/fullpage.css" />
@@ -25,10 +34,9 @@
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
 
+    <script src="../js/aos.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
-    <script src="../js/aos.js"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/aos.js"></script>
     <script src="../js/splitting.min.js"></script>
     <script src="../js/greensock/gsap.min.js"></script>
   </head>
@@ -75,41 +83,84 @@
       </button>
     </header>
     <!--header end-->
-    <div id="mainVisual">
-      <div class="inner">
-        <section class="section">
+    <main id="main" class="black">
+      <div class="swiper-wrapper">
+        <section class="section swiper-slide" id="mainTitle">
+          <div class="inner" data-swiper-parallax-scale="0.75">
+            <div class="contents" data-swiper-parallax-scale="1.25">
+              <? include("../include/grass.html"); ?>
+            </div>
+            <div class="iconScroll">
+              <span class="icon"></span>
+              <span class="txt">Scroll</span>
+            </div>
+          </div>
+        </section>
+        <section class="section swiper-slide" id="readMe">
+          <div class="inner" data-swiper-parallax-scale="0.75">
+            <div class="contents" data-swiper-parallax-scale="1.25">
+          
+              <? include("../include/grassCol.html"); ?>
+              <div class="profile">
+                <div class="name">Park<br>
+                Jin<br>Sung</div>
+                <div class="readMeList">
+                  <h3 class="title">Readme</h3>
+                  <p class="desc descLeft">반갑습니다.
+                    저는 크리에이터이자 주로 웹 프론트엔드 개발자입니다.<br> 개발을 하고 있으며, 
+                    사용자를 즐겁게 하는 창의적인 작업을 하는 모든 것들을 즐깁니다.<br>
+                     또한, 지금보다 더 나은 결과를 위해서 새로운 것을 배우는 것을 <br>
+                     마다하지 않으며, 항상 개발자와 사용자에게 최적의 경험을 전달해주기<br>
+                      위해서 노력하고 있습니다.</p>
+                  <div class="ex">
+                    <h3 class="subtitle01"></h3>
+                    <p class="desc"></p>
+                  </div>
+                  <div class="edu">
+                    <h3 class="subtitle02"></h3>
+                    <p class="desc"></p>
+                  </div>
+                </div>
+               </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="pagination"></div>
+
+    </main>
+
+<!--     
+    <main id="main">
+      <div class="swiper-wrapper">
+        <section class="section swiper-slide" id="mainTitle">
           <? include("../include/grass.html"); ?>
           <div class="iconScroll">
             <span class="icon"></span>
             <span class="txt">Scroll</span>
           </div>
         </section>
+        <!--mainVisual end-->
+        <!-- <section class="section swiper-slide" id="readMe">
+          <? include("../include/grassCol.html"); ?>
+        </section> -->
+        <footer id="footer"></footer>
       </div>
-    </div>
-    <!--mainVisual end-->
-    <div id="readMe">
-      <section class="section">
-        <? include("../include/grassCol.html"); ?>
-      </section>
-    </div>
-
-    <footer id="footer" class="fp-auto-height">
-      <div class="footerSns">
-        <ul>
-          <li></li>
-        </ul>
-      </div>
-      <div class="address">
-        <p class="privacy">
-          서울특별시 강남구 학동로77길 24, 1층<br />
-          +82 2 547 5679<br />
-          <a href="">salmon@duotone.io</a>
-        </p>
-      </div>
-      <p class="copyright">Duotone. All rights reserved.</p>
-    </footer>
+    </main> -->
     <script>
       Splitting();
+
+      const mainSlider = new Swiper("#main", {
+        direction: "vertical",
+        speed: 1000,
+        parallax: true,
+        mousewheel: {
+          //invert: true,
+        },
+       
+      });
+
+
 
       gsap.defaults({
         duration: 1,
@@ -119,14 +170,14 @@
       const mainTL = gsap.timeline();
       const mainBoxTL = gsap.timeline();
 
-      mainBoxTL.to("#mainVisual .titleBox ", {
+      mainBoxTL.to("#mainTitle .titleBox ", {
         opacity: 1,
         ease: "power4",
         delay: 0.5,
       });
 
       mainTL
-        .to("#mainVisual .titleBox .gitBox .grassCol .grass", {
+        .to("#mainTitle .titleBox .gitBox .grassCol .grass", {
           opacity: 1,
           ease: "power4",
           delay: 1,
@@ -137,7 +188,7 @@
             rotation: 360,
           },
         })
-        .to("#mainVisual .inner .iconScroll", {
+        .to("#mainTitle .iconScroll", {
           opacity: 1,
         });
 
@@ -162,18 +213,14 @@
         });
       });
 
-      new Swiper("#methods .figureList", {
-        slidesPerView: "auto",
-        spaceBetween: 300,
-        centeredSlides: true,
-        loop: true,
-        mousewheel: true,
-        pagination: {
-          el: "#methods .pagination",
-          type: "bullets",
-          clickable: true,
-        },
-      });
+      // const mainSlider = new Swiper("#main", {
+      //   direction: "vertical",
+      //   speed: 1000,
+      //   parallax: true,
+      //   mousewheel: {
+      //     //invert: true,
+      //   },
+      // });
 
       $(window).on("resize", function () {
         const w = $(window).outerWidth();
