@@ -2,6 +2,10 @@ html {
   font-size: 14px;
 }
 
+html::-webkit-scrollbar {
+  width: 0vw;
+}
+
 a {
   color: inherit;
   text-decoration: none;
