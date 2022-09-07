@@ -14,18 +14,9 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../css/aos.css" />
     <link rel="stylesheet" href="../css/splitting.css" />
     <link rel="stylesheet" href="../css/fullpage.css" />
@@ -102,29 +93,30 @@
               <? include("../include/grassCol.html"); ?>
               <div class="profile">
                 <div class="name">
-                  Park<br />
+                  <span>Park<br /></span>
                   Jin<br />Sung
                 </div>
                 <div class="readMeList">
-                  <h3 class="title">Readme</h3>
-                  <p class="desc descLeft">
-                    반갑습니다. 저는 크리에이터이자 주로 웹 프론트엔드
-                    개발자입니다.<br />
-                    개발을 하고 있으며, 사용자를 즐겁게 하는 창의적인 작업을
-                    하는 모든 것들을 즐깁니다.<br />
-                    또한, 지금보다 더 나은 결과를 위해서 새로운 것을 배우는 것을
-                    <br />
-                    마다하지 않으며, 항상 개발자와 사용자에게 최적의 경험을
-                    전달해주기<br />
-                    위해서 노력하고 있습니다.
+                  <h3 class="title">ReadMe</h3>
+                  <p class="desc">
+                    반갑습니다. 저는 크리에이터이자 주로 웹 프론트엔드 개발자입니다. 개발을 하고 있으며, 사용자를 즐겁게 하는 창의적인 작업을 하는 모든 것들을 즐깁니다. 또한, 지금보다 더 나은 결과를
+                    위해서 새로운 것을 배우는 것을 마다하지 않으며, 항상 개발자와 사용자에게 최적의 경험을 전달해주기 위해서 노력하고 있습니다.
                   </p>
                   <div class="ex">
-                    <h3 class="subtitle01"></h3>
-                    <p class="desc"></p>
+                    <h3 class="subtitle01">Experience</h3>
+                    <p class="desc">
+                      저는 크리에이터이자 주로 웹 프론트엔드 개발자입니다. 개발을 하고 있으며, 사용자를 즐겁게 하는 창의적인 작업을 하는 모든 것들을 즐깁니다. 또한, 지금보다 더 나은 결과를 위해서
+                      새로운 것을 배우는 것을 마다하지 않으며, 항상 개발자와 사용자에게 최적의 경험을 전달해주기 위해서 노력하고 있습니다.
+                    </p>
                   </div>
                   <div class="edu">
-                    <h3 class="subtitle02"></h3>
-                    <p class="desc"></p>
+                    <h3 class="subtitle02">Education</h3>
+                    <p class="desc">
+                      강남대학교 <br />
+                      사회체육학과 중퇴<br /><br />
+
+                      TIS 정보기술 (2022.04 ~ 2022.09) 웹퍼블리싱 , 프론트엔드 과정 수료
+                    </p>
                   </div>
                 </div>
               </div>
@@ -161,8 +153,11 @@
         delay: 0.5,
       });
 
+      const grass = $("#mainTitle .titleBox .grass");
+      const grassColor01 = $("#mainTitle .titleBox #grassColor01");
+
       mainTL
-        .to("#mainTitle .titleBox .gitBox .grassCol .grass", {
+        .to(grass, {
           opacity: 1,
           ease: "power4",
           delay: 1,
@@ -177,6 +172,22 @@
           opacity: 1,
         });
 
+      grassColor01.hover(function () {
+        $(this).css("background-color", "#216e39");
+        $(this).css("border", "#216e39");
+      });
+
+      // const hover = gsap.to(grass, {
+      //   scaleX: 1.12,
+      //   scaleY: 1.12,
+      //   duration: 1.5,
+      //   paused: true,
+      //   ease: "ease-in-out",
+      // });
+
+      // grass.hover(hover.play());
+      // grass.hover(hover.reverse());
+
       let header = $("#header");
       const btnAll = $(".btnAll");
       const depth01 = $("#gnb  li");
@@ -187,11 +198,6 @@
         const gnbTL = gsap.timeline();
         const subTL = gsap.timeline();
         gnbTL.to("#gnb .mainList", {
-          opacity: 1,
-          ease: "power4",
-          duration: 4,
-        });
-        subTL.to("#gnb .subList", {
           opacity: 1,
           ease: "power4",
           duration: 4,
