@@ -377,32 +377,42 @@
         padding: 20px;
         flex-grow: 1;
         color: $main-color;
-        justify-content: space-between;
-        // .pagination {
-        //   position: absolute;
-        //   bottom: 50px;
-        //   z-index: 2;
-        //   text-align: center;
-        //   .swiper-pagination-bullet {
-        //     width: 100px;
-        //     height: 4px;
-        //     opacity: 1;
-        //     border-radius: 0;
-        //     background-color: rgba(255, 255, 255, 0.5);
-        //     position: relative;
-        //     &:after {
-        //       @include pseudo;
-        //       @include box(0, 100%, $main-color);
-        //     }
-        //     &-active:after {
-        //       width: 100%;
-        //       transition: width 3s linear;
-        //     }
-        //   }
-        // }
+        justify-content: right;
+        .swiper-pagination-bullets {
+          position: absolute;
+          z-index: 2;
+          left: 140px;
+          .swiper-pagination-bullet {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            opacity: 1;
+            border-radius: 5px;
+            border: 3px solid $grass01-bdcolor;
+            background-color: $grass01-color;
+            margin: 10px 0;
+
+            &:after {
+              position: absolute;
+              content: "";
+              display: block;
+              width: 0;
+              height: 100%;
+              background-color: $grass03-color;
+            }
+            &-active:after {
+              width: 100%;
+              transform: translate(-3px, -3px);
+              border-radius: 5px;
+              border: 3px solid $grass03-bdcolor;
+              transition: width 0.25s linear;
+            }
+          }
+        }
         .projectsList {
           display: flex;
           flex-direction: column;
+          width: clamp(240px, 31vw, 480px);
           .project {
             width: auto;
             height: auto;
@@ -433,7 +443,7 @@
             }
             &.prev {
               top: 43.5%;
-              left: 50%;
+              left: 58%;
               width: 100px;
               height: 100px;
               opacity: 0.5;
@@ -444,7 +454,7 @@
             }
             &.next {
               top: 54.4%;
-              left: 50%;
+              left: 58%;
               width: 100px;
               height: 100px;
               opacity: 0.5;
