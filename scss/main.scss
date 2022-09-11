@@ -192,20 +192,21 @@
       .profile {
         display: flex;
         position: relative;
-
         .name {
           font-size: clamp(25px, 5.7vw, 45px);
           font-weight: 900;
           position: absolute;
           left: -20%;
-          -webkit-text-stroke: 1px $main-color;
+          // -webkit-text-stroke: 1px $main-color;
           letter-spacing: 10px;
           line-height: 1.3;
-          color: transparent;
+          color: $main-color;
           margin-top: 10px;
+          text-shadow: 2px 2px 2px #fff;
+          opacity: 0;
           span {
             color: $main-color;
-            -webkit-text-stroke: transparent;
+            // -webkit-text-stroke: transparent;
           }
         }
         .readMeList {
@@ -222,15 +223,18 @@
             -webkit-text-stroke: 1px $main-color;
             color: transparent;
             margin-bottom: 60px;
+            opacity: 0;
           }
           .desc {
             font-size: clamp(12px, 1.3vw, 16px);
             font-weight: 700;
             line-height: 1.3;
             color: $main-color;
+            opacity: 0;
           }
-          .ex {
+          .exp {
             margin: 30px 0;
+            opacity: 0;
             .subtitle01 {
               text-align: right;
               margin-top: 30px;
@@ -250,6 +254,7 @@
           .edu {
             margin: 30px 0;
             text-align: right;
+            opacity: 0;
 
             .subtitle02 {
               margin-bottom: 40px;
@@ -267,6 +272,189 @@
           }
         }
         flex-grow: 6;
+      }
+    }
+  }
+}
+
+#repositories {
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contents {
+      display: flex;
+      word-break: keep-all;
+
+      .repositoriesBox {
+        width: clamp(230px, 7vw, 600px);
+        height: auto;
+        display: block;
+        flex-grow: 1;
+        flex-direction: column;
+        margin-right: 50px;
+        color: $main-color;
+        .repositoriesList {
+          .repository {
+            height: auto;
+            padding: 25px;
+            border-top: 5px solid #dfe1e4;
+            border-bottom: 5px solid #dfe1e4;
+            .repoTitle {
+              font-size: clamp(24px, 4.6vw, 40px);
+              font-weight: 900;
+              -webkit-text-stroke: 1px $main-color;
+              color: transparent;
+              margin-bottom: 30px;
+            }
+            .projectName {
+              font-size: clamp(18px, 3.4vw, 30px);
+              font-weight: 900;
+              color: $main-color;
+              margin-bottom: 30px;
+            }
+            .descBox {
+              margin-bottom: 30px;
+              .descTitle {
+                font-size: clamp(16px, 3vw, 20px);
+                font-weight: 900;
+                margin-bottom: 10px;
+              }
+              .repoDesc {
+                font-size: clamp(12px, 2.6vw, 16px);
+                font-weight: 700;
+                line-height: 1.3;
+                color: $desc-color;
+              }
+            }
+            .skillBox {
+              .skillTitle {
+                font-size: clamp(16px, 3.6vw, 25px);
+                font-weight: 900;
+                margin-bottom: 20px;
+
+                span {
+                  -webkit-text-stroke: 1px $main-color;
+                  color: transparent;
+                }
+              }
+              .frontend {
+                margin-bottom: 15px;
+                .skillTitle {
+                  font-size: 20px;
+                  margin-bottom: 15px;
+                  color: #111;
+                }
+                .repoDesc {
+                  font-size: clamp(12px, 2.3vw, 18px);
+                  color: $desc-color;
+                  line-height: 1.3;
+                }
+              }
+              .backend {
+                margin-bottom: 15px;
+                .skillTitle {
+                  font-size: 20px;
+                  margin-bottom: 15px;
+                  color: #111;
+                }
+                .repoDesc {
+                  font-size: clamp(12px, 2.3vw, 18px);
+                  color: $desc-color;
+                  line-height: 1.3;
+                }
+              }
+            }
+          }
+        }
+      }
+      .projectsBox {
+        position: relative;
+        width: auto;
+        height: 100%;
+        display: flex;
+        border-radius: 20px;
+        padding: 20px;
+        flex-grow: 1;
+        color: $main-color;
+        justify-content: space-between;
+        .pagination {
+          position: absolute;
+          bottom: 50px;
+          z-index: 2;
+          text-align: center;
+          .swiper-pagination-bullet {
+            width: 100px;
+            height: 4px;
+            opacity: 1;
+            border-radius: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: relative;
+            &:after {
+              @include pseudo;
+              @include box(0, 100%, $main-color);
+            }
+            &-active:after {
+              width: 100%;
+              transition: width 3s linear;
+            }
+          }
+        }
+        .projectsList {
+          display: flex;
+          flex-direction: column;
+          .project {
+            width: auto;
+            height: auto;
+            align-items: center;
+            box-shadow: 4px 5px 15px #706868;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              width: clamp(240px, 31vw, 480px);
+              background-repeat: no-repeat;
+            }
+            .projectTitle {
+              font-size: clamp(18px, 3.4vw, 30px);
+              font-weight: 700;
+              padding: 40px 15px;
+            }
+          }
+        }
+        .slideArrow {
+          button {
+            position: absolute;
+            z-index: 2;
+            background: none;
+            color: #242a70;
+            .material-icons {
+              font-size: clamp(60px, 10vw, 120px);
+              font-weight: 300;
+            }
+            &.prev {
+              top: 43.5%;
+              left: 50%;
+              width: 100px;
+              height: 100px;
+              opacity: 0.5;
+              &:hover {
+                opacity: 1;
+                transition: all 0.25s ease-in-out;
+              }
+            }
+            &.next {
+              top: 54.4%;
+              left: 50%;
+              width: 100px;
+              height: 100px;
+              opacity: 0.5;
+              &:hover {
+                opacity: 1;
+                transition: all 0.25s ease-in-out;
+              }
+            }
+          }
+        }
       }
     }
   }

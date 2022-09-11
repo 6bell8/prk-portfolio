@@ -39,8 +39,7 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/splitting.min.js"></script>
     <script src="../js/greensock/gsap.min.js"></script>
-    <script src="../js/greensock/CSSRulePlugin.min.js"></script>
-    <script src="../js/greensock/scrolltrigger.min.js"></script>
+    <script src="../js/greensock/cssruleplugin.min.js"></script>
     <script src="../js/grass.js" defer></script>
     <script src="../js/readMe.js" defer></script>
     <script src="../js/mainSwiper.js" defer></script>
@@ -90,7 +89,7 @@
     <!--header end-->
     <main id="main" class="black">
       <div class="swiper-wrapper">
-        <!-- <section class="section swiper-slide" id="mainTitle">
+        <section class="section swiper-slide" id="mainTitle">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
               <? include("../include/grass.html"); ?>
@@ -106,7 +105,7 @@
             <div class="contents" data-swiper-parallax-scale="1.25">
               <? include("../include/grassCol.html"); ?>
               <div class="profile">
-                <div class="name" >
+                <div class="name">
                   <span>Park<br /></span>
                   Jin<br />Sung
                 </div>
@@ -136,13 +135,13 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
         <section class="section swiper-slide" id="repositories">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
-              <div class="repositoriesBox swiper-container">
-                <ul class="repositoriesList swiper-wrapper">
-                  <li class="repository swiper-slide">
+              <div class="repositoriesBox">
+                <ul class="repositoriesList">
+                  <li class="repository">
                     <p class="repoTitle">Repositories</h2>
                     <p class="projectName">aaa-remaster</h3>
                       <div class="descBox">
@@ -150,7 +149,7 @@
                         <p class="repoDesc">OOO 메인 페이지를 리마스터하여 제작 되었습니다. keyframe 애니메이션을 활용하여 Scss 활용을 보다 심층적으로 접근할 수 있게되었습니다. 또한 ooo을 구현하기위해 javas script를 사용할 당시 문제점이 발생하였지만, 다른 방법으로 우회하여 해결 할 수 있었습니다.</p>
                       </div>
                       <div class="skillBox">
-                        <p class="skillTitle">Skill <span>used in project</span></p>
+                        <p class="skillTitle">Skill used in project</p>
                         <div class="frontend">
                           <p class="skillTitle">Frontend</p>
                           <p class="repoDesc"> React, JQuery, SCSS</p>
@@ -164,38 +163,16 @@
                   </li>
                 </ul>
               </div>
-              <div class="projectsBox swiper-container" >
-                <div class="pagnation"></div>
-                <ul class="projectsList swiper-wrapper">
-                  <li class="project swiper-slide">
+              <div class="projectsBox">
+                <ul class="projectsList">
+                  <li class="project">
                     <a href="">
-                      <img src="../images/projectImg.png" alt="">
-                      <p class="projectTitle">aaaa - remaster</p>
-                    </a>
-                  </li>
-                  <li class="project swiper-slide">
-                    <a href="">
-                      <img src="../images/projectImg.png" alt="">
-                      <p class="projectTitle">aaaa - remaster</p>
-                    </a>
-                  </li>
-                  <li class="project swiper-slide">
-                    <a href="">
-                      <img src="../images/projectImg.png" alt="">
+                      <img src="" alt="">
                       <p class="projectTitle">aaaa - remaster</p>
                     </a>
                   </li>
                 </ul>
-                <div class="slideArrow">
-                  <button class="prev"><span class="material-icons">
-                    keyboard_arrow_up
-                    </span></button>
-                  <button class="next"><span class="material-icons">
-                    keyboard_arrow_down
-                    </span></button>
-                </div>
               </div>
-              
             </div>
           </div>
         </section>
@@ -205,6 +182,8 @@
     -->
     <script>
       Splitting();
+
+
 
       let header = $("#header");
       const btnAll = $(".btnAll");
@@ -223,29 +202,6 @@
       });
 
   
-      new Swiper("#repositories .contents .swiper-container", {
-    // Optional parameters
-    slidesPerView: "auto",
-        spaceBetween: 120,
-        direction: "vertical",
-        centeredSlides: true,
-        loop: true,
-        // mousewheel: true,
-
-    pagination: {
-          el: "#repositories .pagination",
-          type: "bullets",
-          clickable: true,
-        },
-    navigation: {
-      nextEl: ".next",
-      prevEl: ".prev",
-    },
-  });
-
-
-
-      
 
       $(window).on("resize", function () {
         const w = $(window).outerWidth();
