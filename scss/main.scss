@@ -285,7 +285,6 @@
     .contents {
       display: flex;
       word-break: keep-all;
-
       .repositoriesBox {
         width: clamp(230px, 7vw, 600px);
         height: auto;
@@ -298,6 +297,7 @@
           .repository {
             height: auto;
             padding: 25px;
+            margin-top: 30px;
             border-top: 5px solid #dfe1e4;
             border-bottom: 5px solid #dfe1e4;
             .repoTitle {
@@ -378,28 +378,28 @@
         flex-grow: 1;
         color: $main-color;
         justify-content: space-between;
-        .pagination {
-          position: absolute;
-          bottom: 50px;
-          z-index: 2;
-          text-align: center;
-          .swiper-pagination-bullet {
-            width: 100px;
-            height: 4px;
-            opacity: 1;
-            border-radius: 0;
-            background-color: rgba(255, 255, 255, 0.5);
-            position: relative;
-            &:after {
-              @include pseudo;
-              @include box(0, 100%, $main-color);
-            }
-            &-active:after {
-              width: 100%;
-              transition: width 3s linear;
-            }
-          }
-        }
+        // .pagination {
+        //   position: absolute;
+        //   bottom: 50px;
+        //   z-index: 2;
+        //   text-align: center;
+        //   .swiper-pagination-bullet {
+        //     width: 100px;
+        //     height: 4px;
+        //     opacity: 1;
+        //     border-radius: 0;
+        //     background-color: rgba(255, 255, 255, 0.5);
+        //     position: relative;
+        //     &:after {
+        //       @include pseudo;
+        //       @include box(0, 100%, $main-color);
+        //     }
+        //     &-active:after {
+        //       width: 100%;
+        //       transition: width 3s linear;
+        //     }
+        //   }
+        // }
         .projectsList {
           display: flex;
           flex-direction: column;

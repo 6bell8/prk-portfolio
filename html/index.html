@@ -165,7 +165,7 @@
                 </ul>
               </div>
               <div class="projectsBox swiper-container" >
-                <div class="pagnation"></div>
+                <div class="pagniation"></div>
                 <ul class="projectsList swiper-wrapper">
                   <li class="project swiper-slide">
                     <a href="">
@@ -226,17 +226,23 @@
       new Swiper("#repositories .contents .swiper-container", {
     // Optional parameters
     slidesPerView: "auto",
-        spaceBetween: 120,
+        spaceBetween: 130,
         direction: "vertical",
         centeredSlides: true,
         loop: true,
         // mousewheel: true,
+        pagination: {
+        el:"#elearning .pagination",
+        clickable: true,
+  
+      },
 
     pagination: {
-          el: "#repositories .pagination",
+          el: "#repositories .pagniation",
           type: "bullets",
           clickable: true,
         },
+
     navigation: {
       nextEl: ".next",
       prevEl: ".prev",

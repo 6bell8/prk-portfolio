@@ -407,6 +407,7 @@
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository {
   height: auto;
   padding: 25px;
+  margin-top: 30px;
   border-top: 5px solid #dfe1e4;
   border-bottom: 5px solid #dfe1e4;
 }
@@ -502,38 +503,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-#repositories .inner .contents .projectsBox .pagination {
-  position: absolute;
-  bottom: 50px;
-  z-index: 2;
-  text-align: center;
-}
-
-#repositories .inner .contents .projectsBox .pagination .swiper-pagination-bullet {
-  width: 100px;
-  height: 4px;
-  opacity: 1;
-  border-radius: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: relative;
-}
-
-#repositories .inner .contents .projectsBox .pagination .swiper-pagination-bullet:after {
-  display: block;
-  position: absolute;
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
-  background-color: #242a70;
-}
-
-#repositories .inner .contents .projectsBox .pagination .swiper-pagination-bullet-active:after {
-  width: 100%;
-  -webkit-transition: width 3s linear;
-  transition: width 3s linear;
 }
 
 #repositories .inner .contents .projectsBox .projectsList {
