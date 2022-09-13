@@ -44,39 +44,35 @@
     <script src="../js/grass.js" defer></script>
     <script src="../js/readMe.js" defer></script>
     <script src="../js/mainSwiper.js" defer></script>
+    <script src="../js/repositoriesSW.js" defer></script>
   </head>
   <body>
     <header id="header">
       <h1 id="logo">
-        <a href=""><img src="../images/pjs.svg" alt="" /> </a>
+        <a href=""><img class="bg01" src="../images/pjs01.svg" alt="" /> </a>
       </h1>
       <nav id="gnb">
-        <div class="navImage"></div>
         <div class="mainList">
           <ul class="list">
             <li>
               <h3>01</h3>
-              <a href="#mainVisual" class="depth01">Intro</a>
+              <a href="#mainTitle" class="depth01">about.js</a>
             </li>
             <li>
               <h3>02</h3>
-              <a href="#design" class="depth01">Salmons</a>
+              <a href="#readMe" class="depth01">ReadMe</a>
             </li>
             <li>
               <h3>03</h3>
-              <a href="#mind" class="depth01"> Design</a>
+              <a href="#repositories" class="depth01">Repositories</a>
             </li>
             <li>
               <h3>04</h3>
-              <a href="#wave" class="depth01"> Case Study</a>
+              <a href="#wave" class="depth01">Making</a>
             </li>
             <li>
-              <h3>05</h3>
-              <a href="#salmons" class="depth01"> Openpath</a>
-            </li>
-            <li>
-              <h3>06</h3>
-              <a href="#writing" class="depth01"> Contact</a>
+              <h3>04</h3>
+              <a href="#wave" class="depth01">ContactMe</a>
             </li>
           </ul>
         </div>
@@ -87,10 +83,11 @@
         <span></span>
       </button>
     </header>
+
     <!--header end-->
     <main id="main" class="black">
       <div class="swiper-wrapper">
-        <!-- <section class="section swiper-slide" id="mainTitle">
+        <section class="section swiper-slide" id="mainTitle">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
               <? include("../include/grass.html"); ?>
@@ -128,7 +125,6 @@
                     <p class="desc">
                       강남대학교 <br />
                       사회체육학과 중퇴<br /><br />
-
                       TIS 정보기술 (2022.04 ~ 2022.09) 웹퍼블리싱 , 프론트엔드 과정 수료
                     </p>
                   </div>
@@ -136,7 +132,7 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
         <section class="section swiper-slide" id="repositories">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
@@ -207,47 +203,31 @@
       Splitting();
 
       let header = $("#header");
+      const gnb = $("#gnb")
       const btnAll = $(".btnAll");
-      const depth01 = $("#gnb  li");
+      const depth01 = $("#gnb li");
 
       btnAll.on("click", function () {
         header.toggleClass("open");
+        gnb.toggleClass("open")
         depth01.removeClass("on");
         const gnbTL = gsap.timeline();
         const subTL = gsap.timeline();
+        gnbTL.from("#gnb", {
+          x: 0,
+          ease: "power4",
+          duration: 1,
+        }),
         gnbTL.to("#gnb .mainList", {
           opacity: 1,
           ease: "power4",
-          duration: 4,
-        });
-      });
+          duration: 3,
+        })
+      }),
 
   
-      new Swiper("#repositories .contents .swiper-container", {
-    // Optional parameters
-    slidesPerView: "auto",
-        spaceBetween: 130,
-        direction: "vertical",
-        centeredSlides: true,
-        loop: true,
-        // mousewheel: true,
-     
-
-    pagination: {
-          el: "#repositories .pagniation",
-          type: "bullets",
-          clickable: true,
-        },
-
-    navigation: {
-      nextEl: ".next",
-      prevEl: ".prev",
-    },
-  });
 
 
-
-      
 
       $(window).on("resize", function () {
         const w = $(window).outerWidth();
