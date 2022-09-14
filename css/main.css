@@ -94,12 +94,11 @@
 #mainTitle .iconScroll {
   width: 100%;
   bottom: 50px;
-  margin: 50px 0px;
+  margin: 90px 0px;
   text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  -webkit-text-stroke: 1px #242a70;
-  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  color: #242a70;
   z-index: 1;
   opacity: 0;
 }
@@ -147,7 +146,7 @@
   max-height: 1080px;
   display: flex;
   flex-direction: column;
-  animation: colGrass ease-out 20s infinite;
+  animation: colGrass linear 15s infinite;
 }
 #readMe .inner .contents .flowBox .colGrassBox .grassRow {
   display: flex;
@@ -286,9 +285,12 @@
   height: auto;
   display: block;
   flex-grow: 1;
-  flex-direction: column;
   margin-right: 50px;
   color: #242a70;
+  overflow: hidden;
+}
+#repositories .inner .contents .repositoriesBox .repositoriesList {
+  overflow: hidden;
 }
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository {
   height: auto;
@@ -314,6 +316,7 @@
   margin-bottom: 30px;
 }
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository .descBox .descTitle {
+  color: #111;
   font-size: clamp(16px, 3vw, 20px);
   font-weight: 900;
   margin-bottom: 10px;
@@ -322,37 +325,37 @@
   font-size: clamp(12px, 2.6vw, 16px);
   font-weight: 500;
   line-height: 1.3;
-  color: #111;
+  color: #7b7b7b;
 }
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .skillTitle {
   font-size: clamp(16px, 3.6vw, 25px);
   font-weight: 900;
-  margin-bottom: 20px;
-}
-#repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .skillTitle span {
-  -webkit-text-stroke: 1px #242a70;
-  color: transparent;
+  margin-bottom: clamp(20px, 3vw, 30px);
+  color: #111;
 }
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .frontend {
   margin-bottom: 15px;
 }
-#repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .frontend .skillTitle {
+#repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .frontend .frontSkillTitle {
   font-size: 20px;
   margin-bottom: 15px;
   color: #111;
+  font-weight: 700;
 }
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .frontend .repoDesc {
   font-size: clamp(12px, 2.3vw, 18px);
   color: #7B7B7B;
-  line-height: 1.3;
+  line-height: 1.4;
+  color: #7b7b7b;
 }
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .backend {
   margin-bottom: 15px;
 }
-#repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .backend .skillTitle {
+#repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .backend .backSkillTitle {
   font-size: 20px;
   margin-bottom: 15px;
   color: #111;
+  font-weight: 700;
 }
 #repositories .inner .contents .repositoriesBox .repositoriesList .repository .skillBox .backend .repoDesc {
   font-size: clamp(12px, 2.3vw, 18px);
@@ -418,7 +421,7 @@
   background-repeat: no-repeat;
 }
 #repositories .inner .contents .projectsBox .projectsList .project .projectTitle {
-  font-size: clamp(18px, 3.4vw, 30px);
+  font-size: clamp(18px, 3.4vw, 24px);
   font-weight: 700;
   padding: 40px 15px;
 }
@@ -465,9 +468,9 @@
 }
 @keyframes colGrass {
   from {
-    transform: translateY(99%);
+    transform: translateY(-20%);
   }
   to {
-    transform: translateY(-100%);
+    transform: translateY(-99%);
   }
 }

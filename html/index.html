@@ -81,18 +81,18 @@
     <!--header end-->
     <main id="main" class="black">
       <div class="swiper-wrapper">
-        <section class="section swiper-slide" id="mainTitle">
+        <!-- <section class="section swiper-slide" id="mainTitle">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
               <? include("../include/grass.html"); ?>
             </div>
             <div class="iconScroll">
               <span class="icon"></span>
-              <span class="txt">Scroll</span>
+              <span class="txt">SCROLL</span>
             </div>
           </div>
-        </section>
-        <section class="section swiper-slide" id="readMe">
+        </section> -->
+        <!-- <section class="section swiper-slide" id="readMe">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
               <? include("../include/grassCol.html"); ?>
@@ -130,7 +130,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <section class="section swiper-slide" id="repositories">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
@@ -144,13 +144,13 @@
                         <p class="repoDesc">OOO 메인 페이지를 리마스터하여 제작 되었습니다. keyframe 애니메이션을 활용하여 Scss 활용을 보다 심층적으로 접근할 수 있게되었습니다. 또한 ooo을 구현하기위해 javas script를 사용할 당시 문제점이 발생하였지만, 다른 방법으로 우회하여 해결 할 수 있었습니다.</p>
                       </div>
                       <div class="skillBox">
-                        <p class="skillTitle">Skill <span>used in project</span></p>
+                        <p class="skillTitle">Skill used in project</p>
                         <div class="frontend">
-                          <p class="skillTitle">Frontend</p>
+                          <p class="frontSkillTitle">Frontend</p>
                           <p class="repoDesc"> React, JQuery, SCSS</p>
                         </div>
                         <div class="backend">
-                          <p class="skillTitle">Backend</p>
+                          <p class="backSkillTitle">Backend</p>
                           <p class="repoDesc"> Node.js - Express<br>
                             Database - MongoDB, MySQL</p>
                         </div>
@@ -189,14 +189,22 @@
                     </span></button>
                 </div>
               </div>
-              
             </div>
           </div>
         </section>
-        <footer id="footer"></footer>
-      </div>
+     
+        <footer id="footer" class="swiper-slide">
+          <span> <a href=""><img class="nameLogo" src="../images/pjs02.svg" alt=""></a></span>
+          <p class="phone">
+            <a href="">Tel. 010 5198 6269</a>
+          </p>
+          <p>
+          <a href="mailto:parkgutime@gmail.com">parkgutime@gmail.com</a></p>
+          <span class="gitLogo"><a href=""><img  src="../images/gitLogo.svg" alt=""></a></span>
+          <p class="copyright">Copyright © parkjinsung. All Rights Reserved.</p>
+        </footer>
+      </div>  
     </main>
-    -->
     <script>
       Splitting();
 
@@ -210,6 +218,7 @@
        speed: 1000,
        parallax: true,
        allowTouchMove:false,
+       autoHeight : true,
        mousewheel: {
          //invert: true,
         },

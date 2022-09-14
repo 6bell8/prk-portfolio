@@ -15,7 +15,6 @@ mainTL
     opacity: 1,
     ease: "power4",
     delay: 1,
-    rotation: 360,
     stagger: {
       from: "random",
       each: 0.005,

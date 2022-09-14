@@ -102,12 +102,11 @@
   .iconScroll {
     width: 100%;
     bottom: 50px;
-    margin: 50px 0px;
+    margin: 90px 0px;
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    -webkit-text-stroke: 1px #242a70;
-    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    color: $main-color;
     z-index: 1;
     opacity: 0;
     .icon {
@@ -152,7 +151,7 @@
           max-height: 1080px;
           display: flex;
           flex-direction: column;
-          animation: colGrass ease-out 20s infinite;
+          animation: colGrass linear 15s infinite;
           .grassRow {
             display: flex;
             vertical-align: top;
@@ -285,10 +284,12 @@
         height: auto;
         display: block;
         flex-grow: 1;
-        flex-direction: column;
         margin-right: 50px;
         color: $main-color;
+        overflow: hidden;
         .repositoriesList {
+          overflow: hidden;
+
           .repository {
             height: auto;
             padding: 25px;
@@ -311,6 +312,7 @@
             .descBox {
               margin-bottom: 30px;
               .descTitle {
+                color: #111;
                 font-size: clamp(16px, 3vw, 20px);
                 font-weight: 900;
                 margin-bottom: 10px;
@@ -319,39 +321,39 @@
                 font-size: clamp(12px, 2.6vw, 16px);
                 font-weight: 500;
                 line-height: 1.3;
-                color: #111;
+                color: #7b7b7b;
               }
             }
             .skillBox {
               .skillTitle {
                 font-size: clamp(16px, 3.6vw, 25px);
                 font-weight: 900;
-                margin-bottom: 20px;
-
-                span {
-                  -webkit-text-stroke: 1px $main-color;
-                  color: transparent;
-                }
+                margin-bottom: clamp(20px, 3vw, 30px);
+                color: #111;
               }
               .frontend {
                 margin-bottom: 15px;
-                .skillTitle {
+
+                .frontSkillTitle {
                   font-size: 20px;
                   margin-bottom: 15px;
                   color: #111;
+                  font-weight: 700;
                 }
                 .repoDesc {
                   font-size: clamp(12px, 2.3vw, 18px);
                   color: $desc-color;
-                  line-height: 1.3;
+                  line-height: 1.4;
+                  color: #7b7b7b;
                 }
               }
               .backend {
                 margin-bottom: 15px;
-                .skillTitle {
+                .backSkillTitle {
                   font-size: 20px;
                   margin-bottom: 15px;
                   color: #111;
+                  font-weight: 700;
                 }
                 .repoDesc {
                   font-size: clamp(12px, 2.3vw, 18px);
@@ -368,6 +370,7 @@
         width: auto;
         height: 100%;
         display: flex;
+
         border-radius: 20px;
         padding: 20px;
         flex-grow: 1;
@@ -420,7 +423,7 @@
               background-repeat: no-repeat;
             }
             .projectTitle {
-              font-size: clamp(18px, 3.4vw, 30px);
+              font-size: clamp(18px, 3.4vw, 24px);
               font-weight: 700;
               padding: 40px 15px;
             }
@@ -476,9 +479,9 @@
 
 @keyframes colGrass {
   from {
-    transform: translateY(99%);
+    transform: translateY(-20%);
   }
   to {
-    transform: translateY(-100%);
+    transform: translateY(-99%);
   }
 }
