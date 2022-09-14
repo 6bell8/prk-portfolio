@@ -26,7 +26,10 @@ mainTL
     opacity: 1,
   });
 
-grassColor01.hover(function () {
-  $(this).css("background-color", "#216e39");
-  $(this).css("border", "#216e39");
-});
+// grassColor01.hover(function () {
+//   $(this).css("background-color", "#216e39");
+// });
+
+// mainTL.mouseenter(function () {
+//   to(grass, { opacity: 0 });
+// });
