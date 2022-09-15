@@ -498,7 +498,6 @@
           display: flex;
           flex-direction: column;
           .message {
-            // height: auto;
             margin: 25px 0;
             z-index: 2;
             box-shadow: 5px 5px 10px #e9e9e9;
@@ -506,8 +505,7 @@
             overflow: hidden;
             border: 1px solid #cfcfcf;
             border-radius: 7px;
-            background-color: #fff;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             transition: all 0.5s ease-in-out;
             animation: messageAnimation linear 1.5s infinite alternate;
             &:hover {
@@ -569,8 +567,6 @@
               letter-spacing: 1.1px;
               padding: 15px;
               opacity: 0.5;
-              // background-color: rgba(255, 255, 255, 0.5);
-              // backdrop-filter: blur(20px);
               .messageDesc01,
               .messageDesc02,
               .messageDesc03 {

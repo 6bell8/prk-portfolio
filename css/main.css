@@ -496,8 +496,7 @@
   overflow: hidden;
   border: 1px solid #cfcfcf;
   border-radius: 7px;
-  background-color: #fff;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   transition: all 0.5s ease-in-out;
   animation: messageAnimation linear 1.5s infinite alternate;
 }
