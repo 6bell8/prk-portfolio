@@ -74,7 +74,7 @@
     <!--header end-->
     <main id="main" class="black">
       <div class="swiper-wrapper">
-        <!-- <section class="section swiper-slide" id="mainTitle">
+        <section class="section swiper-slide" id="mainTitle">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
               <? include("../include/grass.html"); ?>
@@ -183,7 +183,7 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
         <section class="section swiper-slide" id="making">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
@@ -232,8 +232,7 @@
           </div>
           <div id="bgParticle"></div>
         </section>
-
-        <footer id="footer" class="swiper-slide">
+        <section id="footer" class="swiper-slide">
           <span>
             <a href=""><img class="nameLogo" src="../images/pjs02.svg" alt="" /></a
           ></span>
@@ -247,7 +246,7 @@
             ><a href=""><img src="../images/gitLogo.svg" alt="" /></a
           ></span>
           <p class="copyright">Copyright © parkjinsung. All Rights Reserved.</p>
-        </footer>
+        </section>
       </div>
     </main>
     <script>
@@ -268,6 +267,15 @@
           //invert: true,
         },
       });
+
+      mainSlider.on('transitionEnd', function() {
+        if (mainSlider.realIndex === 4) {
+          $("body").addClass("on");
+        }  else {
+          $("body").removeClass("on");
+        }
+      });
+
 
       gsap.defaults({
         duration: 1,
@@ -298,6 +306,8 @@
         return false;
       });
 
+
+
       $(window).on("resize", function () {
         const w = $(window).outerWidth();
         if (w <= 1200) {
@@ -306,6 +316,9 @@
           header.removeClass("mobile open");
         }
       });
+
+
+
       particlesJS.load("bgParticle", "../js/particlesjs-config.json", function () {
         console.log("particles.js loaded - callback");
       });
