@@ -198,14 +198,18 @@ body {
   background-color: $main-color;
   padding: 50px 0;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   color: #fff;
   font-weight: 300;
+  a {
+    letter-spacing: 1px;
+  }
   p {
     padding: 15px 0;
-    font-size: 18px;
+    font-size: 14px;
+    letter-spacing: 1.5;
   }
   img {
     margin: 20px;
@@ -214,10 +218,16 @@ body {
   .gitLogo {
     img {
       filter: brightness(2);
+      width: 30px;
+      &:hover {
+        filter: brightness(1);
+        transition: filter 0.25s ease-in-out;
+      }
     }
   }
   .copyright {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ccc;
   }
 }

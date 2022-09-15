@@ -223,7 +223,7 @@
 #readMe .inner .contents .profile .readMeList .desc {
   font-size: clamp(12px, 1.3vw, 16px);
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
   color: #111;
   opacity: 0;
 }
@@ -246,8 +246,8 @@
   height: 15px;
   background-color: #9be9a8;
   border-radius: 3px;
-  border: 2px solid #97dea2;
-  transform: translate(-200%, 10%);
+  border: 3px solid #97dea2;
+  transform: translate(-200%, 15%);
 }
 #readMe .inner .contents .profile .readMeList .edu {
   opacity: 0;
@@ -267,8 +267,8 @@
   height: 15px;
   background-color: #9be9a8;
   border-radius: 3px;
-  border: 2px solid #97dea2;
-  transform: translate(-200%, 10%);
+  border: 3px solid #97dea2;
+  transform: translate(-200%, 15%);
 }
 
 #repositories .inner {
@@ -456,6 +456,28 @@
 #repositories .inner .contents .projectsBox .slideArrow button.next:hover {
   opacity: 1;
   transition: all 0.25s ease-in-out;
+}
+
+#making .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#making .inner .contents {
+  display: flex;
+  word-break: keep-all;
+}
+#making .inner .contents .makingBox {
+  border-top: 5px solid #dfe1e4;
+  border-bottom: 5px solid #dfe1e4;
+}
+#making .inner .contents .makingBox .makingTitle {
+  font-size: clamp(24px, 4.6vw, 40px);
+  font-weight: 900;
+  -webkit-text-stroke: 1px #242a70;
+  color: transparent;
+  margin: 40px 0;
+  text-align: right;
 }
 
 @keyframes mouseAnimation {

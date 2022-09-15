@@ -14,18 +14,9 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../css/aos.css" />
     <link rel="stylesheet" href="../css/splitting.css" />
     <link rel="stylesheet" href="../css/fullpage.css" />
@@ -91,8 +82,8 @@
               <span class="txt">SCROLL</span>
             </div>
           </div>
-        </section> -->
-        <!-- <section class="section swiper-slide" id="readMe">
+        </section>
+        <section class="section swiper-slide" id="readMe">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
               <? include("../include/grassCol.html"); ?>
@@ -121,8 +112,7 @@
                   <div class="edu">
                     <h3 class="subtitle02">Education</h3>
                     <p class="desc">
-                      강남대학교 <br />
-                      사회체육학과 중퇴<br /><br />
+                      강남대학교 중퇴<br />
                       TIS 정보기술 (2022.04 ~ 2022.09) 웹퍼블리싱 , 프론트엔드 과정 수료
                     </p>
                   </div>
@@ -130,7 +120,7 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
         <section class="section swiper-slide" id="repositories">
           <div class="inner" data-swiper-parallax-scale="0.75">
             <div class="contents" data-swiper-parallax-scale="1.25">
@@ -191,36 +181,62 @@
               </div>
             </div>
           </div>
+        </section> -->
+        <section class="section swiper-slide" id="making">
+          <div class="inner" data-swiper-parallax-scale="0.75">
+            <div class="contents" data-swiper-parallax-scale="1.25">
+              <div class="makingBox swiper-container">
+                <h1 class="makingTitle">Making</h1>
+                <ul class="makingList swiper-wrapper">
+                  <li class="message swiper-slide">
+                    <div class="messageMain">
+                      <h3 class="messageTitle">about.js</h3>
+                      <h3 class="messageDetail">Detail</h3>
+                    </div>
+                    <div class="messageDesc">
+                      allAbout.js는 저의 이니셜 pjs으로부터 가져온 카피라이팅입니다. 저를 소개하는 자리에서 보다 익숙하고 알기 쉬운 방법으로 어필해보는 것은 어떨까 고안 중, 자바스크립트 라이브러리를
+                      다운 받으면서 라이브러리 설명서처럼 포트폴리오를 짜보는 것이 어떨까라는 생각에 ~~ allAbout.js는 저의 이니셜 pjs으로부터 가져온 카피라이팅입니다.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
-     
+
         <footer id="footer" class="swiper-slide">
-          <span> <a href=""><img class="nameLogo" src="../images/pjs02.svg" alt=""></a></span>
+          <span>
+            <a href=""><img class="nameLogo" src="../images/pjs02.svg" alt="" /></a
+          ></span>
           <p class="phone">
             <a href="">Tel. 010 5198 6269</a>
           </p>
           <p>
-          <a href="mailto:parkgutime@gmail.com">parkgutime@gmail.com</a></p>
-          <span class="gitLogo"><a href=""><img  src="../images/gitLogo.svg" alt=""></a></span>
+            <a href="mailto:parkgutime@gmail.com">parkgutime@gmail.com</a>
+          </p>
+          <span class="gitLogo"
+            ><a href=""><img src="../images/gitLogo.svg" alt="" /></a
+          ></span>
           <p class="copyright">Copyright © parkjinsung. All Rights Reserved.</p>
         </footer>
-      </div>  
+      </div>
     </main>
     <script>
       Splitting();
 
       let header = $("#header");
-      const gnb = $("#gnb")
+      const gnb = $("#gnb");
       const btnAll = $(".btnAll");
       const depth01 = $("#gnb li");
 
       const mainSlider = new Swiper("#main", {
-       direction: "vertical",
-       speed: 1000,
-       parallax: true,
-       allowTouchMove:false,
-       autoHeight : true,
-       mousewheel: {
-         //invert: true,
+        direction: "vertical",
+        speed: 1000,
+        parallax: true,
+        allowTouchMove: false,
+        autoHeight: true,
+        mousewheel: {
+          //invert: true,
         },
       });
 
@@ -229,36 +245,29 @@
         ease: "power4",
       });
 
-
-      
       btnAll.on("click", function () {
         header.toggleClass("open");
         depth01.removeClass("on");
         const gnbTL = gsap.timeline();
         gnbTL.to("#gnb .mainList li", {
-          opacity: 1, 
-          duration: 3, 
-          ease: "bounce", 
+          opacity: 1,
+          duration: 3,
+          ease: "bounce",
           stagger: {
             opacity: 1,
-            amount:0.5,
+            amount: 0.5,
           },
-        })  
+        });
       });
-      
+
       depth01.on("click", function () {
         const idx = $(this).index();
         header.removeClass("open");
-        setTimeout(()=>{
+        setTimeout(() => {
           mainSlider.slideTo(idx);
-        },800)
+        }, 800);
         return false;
       });
-
-   
-  
-      
-
 
       $(window).on("resize", function () {
         const w = $(window).outerWidth();
