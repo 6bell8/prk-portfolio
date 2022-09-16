@@ -106,7 +106,7 @@ body.on #header .btnAll span:nth-child(3) {
   align-items: center;
   justify-content: center;
   padding: 80px 0;
-  width: 450px;
+  width: clamp(250px, 20vw, 450px);
   opacity: 1;
 }
 #gnb .mainList .list li {
@@ -142,7 +142,7 @@ body.on #header .btnAll span:nth-child(3) {
 #gnb .mainList .list li a {
   text-decoration: none;
   -webkit-text-stroke: 1px #fff;
-  font-size: clamp(46px, 4.1vw, 60px);
+  font-size: clamp(30px, 4.1vw, 60px);
   font-weight: 700;
   letter-spacing: -0.93px;
   color: hsla(0deg, 0%, 100%, 0);
@@ -151,8 +151,8 @@ body.on #header .btnAll span:nth-child(3) {
   position: absolute;
   content: "";
   display: block;
-  width: clamp(10px, 2.8vw, 15px);
-  height: clamp(10px, 2.8vw, 15px);
+  width: clamp(10px, 1vw, 15px);
+  height: clamp(10px, 1vw, 15px);
   border-radius: 3px;
   transform: translate(0, 100%);
   left: -60px;
@@ -222,4 +222,10 @@ body.on #header .btnAll span:nth-child(3) {
   font-size: 12px;
   font-weight: 300;
   color: #ccc;
+}
+
+@media all and (max-width: 960px) {
+  #gnb .mainList .list li a::before {
+    transform: translate(0, 50%);
+  }
 }

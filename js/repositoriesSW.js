@@ -39,7 +39,7 @@
 
 new Swiper("#repositories .contents .swiper-container", {
   slidesPerView: "auto",
-  spaceBetween: 130,
+  spaceBetween: 170,
   direction: "vertical",
   centeredSlides: true,
   allowTouchMove: false,
