@@ -239,7 +239,7 @@
           .desc {
             font-size: clamp(12px, 1.3vw, 16px);
             font-weight: 300;
-            line-height: 1.4;
+            line-height: 1.5;
             color: #111;
           }
           .exp {
@@ -335,7 +335,7 @@
               .repoDesc {
                 font-size: clamp(12px, 2.6vw, 16px);
                 font-weight: 300;
-                line-height: 1.3;
+                line-height: 1.4;
                 color: #7b7b7b;
               }
             }
@@ -373,7 +373,7 @@
                 .repoDesc {
                   font-size: clamp(12px, 2.3vw, 18px);
                   color: $desc-color;
-                  line-height: 1.3;
+                  line-height: 1.4;
                 }
               }
             }
@@ -452,7 +452,7 @@
             background: none;
             color: #242a70;
             .material-icons {
-              font-size: clamp(60px, 10vw, 120px);
+              font-size: clamp(60px, 10vw, 140px);
               font-weight: 300;
             }
             &.prev {
