@@ -391,7 +391,7 @@
         justify-content: right;
         .swiper-pagination-bullets {
           position: absolute;
-          z-index: 2;
+          z-index: 1;
           left: 140px;
           .swiper-pagination-bullet {
             position: relative;
@@ -435,13 +435,22 @@
             overflow: hidden;
             img {
               width: clamp(240px, 31vw, 480px);
+              height: clamp(220px, 20vw, 340px);
               background-repeat: no-repeat;
             }
             .projectTitle {
-              font-size: clamp(18px, 3.4vw, 24px);
-              font-weight: 700;
               padding: 40px 15px;
               background-color: #fff;
+              .pTitle {
+                font-size: clamp(18px, 3.4vw, 24px);
+                font-weight: 700;
+              }
+              .psub {
+                font-size: 14px;
+                font-weight: 300;
+                padding-top: 20px;
+                color: #7b7b7b;
+              }
             }
           }
         }
@@ -452,11 +461,11 @@
             background: none;
             color: #242a70;
             .material-icons {
-              font-size: clamp(60px, 10vw, 140px);
+              font-size: clamp(100px, 10vw, 140px);
               font-weight: 300;
             }
             &.prev {
-              top: 43.5%;
+              top: 45.7%;
               left: 58%;
               width: 100px;
               height: 100px;
@@ -467,7 +476,7 @@
               }
             }
             &.next {
-              top: 54.4%;
+              top: 52.9%;
               left: 58%;
               width: 100px;
               height: 100px;
@@ -653,6 +662,35 @@
                 display: block;
               }
             }
+          }
+        }
+      }
+    }
+  }
+  #repositories {
+    .inner {
+      .contents {
+        .repositoriesBox {
+          display: none;
+        }
+
+        .projectsBox {
+          justify-content: center;
+          .prev {
+            .material-icons {
+              transform: translateX(clamp(-210px, 11vw, -185px));
+            }
+          }
+          .next {
+            .material-icons {
+              transform: translateX(clamp(-210px, 11vw, -185px));
+            }
+          }
+          .slideArrow {
+            position: relative;
+          }
+          .swiper-pagination-bullets {
+            left: 20px;
           }
         }
       }

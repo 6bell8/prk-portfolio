@@ -387,7 +387,7 @@
 }
 #repositories .inner .contents .projectsBox .swiper-pagination-bullets {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   left: 140px;
 }
 #repositories .inner .contents .projectsBox .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -432,13 +432,22 @@
 }
 #repositories .inner .contents .projectsBox .projectsList .project img {
   width: clamp(240px, 31vw, 480px);
+  height: clamp(220px, 20vw, 340px);
   background-repeat: no-repeat;
 }
 #repositories .inner .contents .projectsBox .projectsList .project .projectTitle {
-  font-size: clamp(18px, 3.4vw, 24px);
-  font-weight: 700;
   padding: 40px 15px;
   background-color: #fff;
+}
+#repositories .inner .contents .projectsBox .projectsList .project .projectTitle .pTitle {
+  font-size: clamp(18px, 3.4vw, 24px);
+  font-weight: 700;
+}
+#repositories .inner .contents .projectsBox .projectsList .project .projectTitle .psub {
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 20px;
+  color: #7b7b7b;
 }
 #repositories .inner .contents .projectsBox .slideArrow button {
   position: absolute;
@@ -447,11 +456,11 @@
   color: #242a70;
 }
 #repositories .inner .contents .projectsBox .slideArrow button .material-icons {
-  font-size: clamp(60px, 10vw, 140px);
+  font-size: clamp(100px, 10vw, 140px);
   font-weight: 300;
 }
 #repositories .inner .contents .projectsBox .slideArrow button.prev {
-  top: 43.5%;
+  top: 45.7%;
   left: 58%;
   width: 100px;
   height: 100px;
@@ -462,7 +471,7 @@
   transition: all 0.25s ease-in-out;
 }
 #repositories .inner .contents .projectsBox .slideArrow button.next {
-  top: 54.4%;
+  top: 52.9%;
   left: 58%;
   width: 100px;
   height: 100px;
@@ -628,6 +637,24 @@
   }
   #readMe .inner .contents .profile .readMeList .nameTitleBox .title02 {
     display: block;
+  }
+  #repositories .inner .contents .repositoriesBox {
+    display: none;
+  }
+  #repositories .inner .contents .projectsBox {
+    justify-content: center;
+  }
+  #repositories .inner .contents .projectsBox .prev .material-icons {
+    transform: translateX(clamp(-210px, 11vw, -185px));
+  }
+  #repositories .inner .contents .projectsBox .next .material-icons {
+    transform: translateX(clamp(-210px, 11vw, -185px));
+  }
+  #repositories .inner .contents .projectsBox .slideArrow {
+    position: relative;
+  }
+  #repositories .inner .contents .projectsBox .swiper-pagination-bullets {
+    left: 20px;
   }
 }
 @media all and (max-width: 480px) {
