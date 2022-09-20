@@ -442,12 +442,13 @@
               padding: 40px 15px;
               background-color: #fff;
               .pTitle {
-                font-size: clamp(18px, 3.4vw, 24px);
-                font-weight: 700;
+                font-size: clamp(18px, 3.4vw, 28px);
+                font-weight: 900;
               }
               .psub {
                 font-size: 14px;
                 font-weight: 300;
+                line-height: 1.5;
                 padding-top: 20px;
                 color: #7b7b7b;
               }
@@ -465,7 +466,7 @@
               font-weight: 300;
             }
             &.prev {
-              top: 45.7%;
+              top: 46.7%;
               left: 58%;
               width: 100px;
               height: 100px;
@@ -476,7 +477,7 @@
               }
             }
             &.next {
-              top: 52.9%;
+              top: 52.3%;
               left: 58%;
               width: 100px;
               height: 100px;

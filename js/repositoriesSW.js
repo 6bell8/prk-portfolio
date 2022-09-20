@@ -8,7 +8,7 @@ const repositories = new Swiper("#repositories .contents .repositoriesBox", {
   centeredSlides: true,
   loop: true,
   allowTouchMove: false,
-  speed: 1000,
+  speed: 800,
 });
 
 const project = new Swiper("#repositories .contents .projectsBox", {
@@ -18,7 +18,7 @@ const project = new Swiper("#repositories .contents .projectsBox", {
   centeredSlides: true,
   loop: true,
   allowTouchMove: false,
-  speed: 1000,
+  speed: 800,
 
   navigation: {
     nextEl: ".next",

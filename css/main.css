@@ -440,12 +440,13 @@
   background-color: #fff;
 }
 #repositories .inner .contents .projectsBox .projectsList .project .projectTitle .pTitle {
-  font-size: clamp(18px, 3.4vw, 24px);
-  font-weight: 700;
+  font-size: clamp(18px, 3.4vw, 28px);
+  font-weight: 900;
 }
 #repositories .inner .contents .projectsBox .projectsList .project .projectTitle .psub {
   font-size: 14px;
   font-weight: 300;
+  line-height: 1.5;
   padding-top: 20px;
   color: #7b7b7b;
 }
@@ -460,7 +461,7 @@
   font-weight: 300;
 }
 #repositories .inner .contents .projectsBox .slideArrow button.prev {
-  top: 45.7%;
+  top: 46.7%;
   left: 58%;
   width: 100px;
   height: 100px;
@@ -471,7 +472,7 @@
   transition: all 0.25s ease-in-out;
 }
 #repositories .inner .contents .projectsBox .slideArrow button.next {
-  top: 52.9%;
+  top: 52.3%;
   left: 58%;
   width: 100px;
   height: 100px;
