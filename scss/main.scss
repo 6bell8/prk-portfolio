@@ -433,6 +433,19 @@
             box-shadow: 4px 5px 15px #706868;
             border-radius: 10px;
             overflow: hidden;
+            &:hover {
+              .projectTitle {
+                .pTitle {
+                  p {
+                    span {
+                      font-size: 30px;
+                      transition: all 0.5s ease-in-out;
+                      transform: rotate(360deg);
+                    }
+                  }
+                }
+              }
+            }
             img {
               width: clamp(240px, 31vw, 480px);
               height: clamp(220px, 20vw, 340px);
@@ -442,8 +455,17 @@
               padding: 40px 15px;
               background-color: #fff;
               .pTitle {
+                height: 40px;
                 font-size: clamp(18px, 3.4vw, 28px);
                 font-weight: 900;
+                display: flex;
+                justify-content: space-between;
+                p {
+                  span {
+                    font-size: 30px;
+                    padding: 5px 0;
+                  }
+                }
               }
               .psub {
                 font-size: 14px;

@@ -430,6 +430,11 @@
   border-radius: 10px;
   overflow: hidden;
 }
+#repositories .inner .contents .projectsBox .projectsList .project:hover .projectTitle .pTitle p span {
+  font-size: 30px;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
 #repositories .inner .contents .projectsBox .projectsList .project img {
   width: clamp(240px, 31vw, 480px);
   height: clamp(220px, 20vw, 340px);
@@ -440,8 +445,15 @@
   background-color: #fff;
 }
 #repositories .inner .contents .projectsBox .projectsList .project .projectTitle .pTitle {
+  height: 40px;
   font-size: clamp(18px, 3.4vw, 28px);
   font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+}
+#repositories .inner .contents .projectsBox .projectsList .project .projectTitle .pTitle p span {
+  font-size: 30px;
+  padding: 5px 0;
 }
 #repositories .inner .contents .projectsBox .projectsList .project .projectTitle .psub {
   font-size: 14px;
