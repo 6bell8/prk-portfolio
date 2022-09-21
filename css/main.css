@@ -667,6 +667,7 @@
   }
   #repositories .inner .contents .projectsBox .swiper-pagination-bullets {
     left: 20px;
+    z-index: 3;
   }
 }
 @media all and (max-width: 480px) {
