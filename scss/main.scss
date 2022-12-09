@@ -100,10 +100,21 @@
       }
     }
   }
+  .alert {
+    width: 100%;
+    bottom: 50px;
+    margin-top: clamp(15px, 5vh, 30px);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: $main-color;
+    z-index: 1;
+    opacity: 1;
+  }
   .iconScroll {
     width: 100%;
     bottom: 50px;
-    margin-top: clamp(30px, 15vh, 110px);
+    margin-top: clamp(30px, 15vh, 70px);
     text-align: center;
     font-size: 12px;
     font-weight: 700;
