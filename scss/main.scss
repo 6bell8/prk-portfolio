@@ -498,10 +498,11 @@
               font-weight: 300;
             }
             &.prev {
-              top: 46.7%;
+              top: 47%;
               left: 58%;
               width: 100px;
               height: 100px;
+              z-index: 3;
               opacity: 0.5;
               &:hover {
                 opacity: 1;
@@ -509,7 +510,7 @@
               }
             }
             &.next {
-              top: 52.3%;
+              top: 52.2%;
               left: 58%;
               width: 100px;
               height: 100px;
